@@ -4,7 +4,7 @@
   "description": "grass",
   "main": "index.tsx",
   "homepage": "https://davishyang.github.io/Grass/",
-  "private": "true",
+  "private": true,
   "scripts": {
     "build": "webpack --config src/webpack.config.js",
     "lint": "comfy-tslint --no-mutation src/*.{ts,tsx}",
