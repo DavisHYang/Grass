@@ -1,0 +1,44 @@
+/*!****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
+  \****************************************************************/
+html, body {
+    margin:0;
+    overflow: hidden;
+    background-color: #11151c;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(1, 30, 50);
+    text-align: center;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    width: 100vw;
+    height: 200vw;
+    z-index: 1;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    font-size: 5vh;
+}
+
+section {
+    width: 100vw;
+    height: 200vw;
+    z-index: 2;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    font-size: 5vh;
+
+    color:rgb(255, 255, 255);
+    
+}
+
+/*# sourceMappingURL=df88b9d44a78f612d190.css.map*/
