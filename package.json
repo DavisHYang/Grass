@@ -1,7 +1,7 @@
 {
-  "name": "test-web-app-client",
+  "name": "grass",
   "version": "0.0.1",
-  "description": "Test Web App Client",
+  "description": "grass",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config src/webpack.config.js",
