@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { THREE, OrbitControls, Sky, Stats } from './three-defs.js';
 
-import CharacterManager from './CharacterManager';
 import LightManager from './LightManager';
 import World from './World';
 
@@ -35,7 +34,6 @@ const App = () => {
 
     const world = new World(scene);
     const lights = new LightManager();
-    const characters = new CharacterManager();
     
     const clock = new THREE.Clock();
     const stats = new Stats();
@@ -139,17 +137,12 @@ const App = () => {
       if(k.key === 'w'){
         world.toggleWireframe();
       }
-
-      if(k.key === 'e'){
-        characters.toggleDebug();
-      }
     });
 
     // Make window scroll to top on load
     window.onbeforeunload = () => {
       window.scrollTo(0, 0);
       world.dispose();
-      characters.dispose();
       lights.dispose();
       sky.removeFromParent();
 
@@ -174,12 +167,10 @@ const App = () => {
 
       stats.begin();
       
-      const delta = clock.getDelta();
+      // const delta = clock.getDelta();
       const elapsed = clock.getElapsedTime();
 
       world.update(elapsed);
-
-      characters.update(delta);
 
       // Render
       renderer.render(scene, camera);
