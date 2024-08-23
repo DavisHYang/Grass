@@ -7,11 +7,13 @@
     "build": "webpack --config src/webpack.config.js",
     "lint": "comfy-tslint --no-mutation src/*.{ts,tsx}",
     "test": "ts-mocha -p tsconfig.json src/**/*_test.{ts,tsx} --require ignore-styles",
-    "start": "webpack-dev-server --config src/webpack.config.js"
+    "start": "webpack-dev-server --config src/webpack.config.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.166.1"
