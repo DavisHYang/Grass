@@ -89,7 +89,7 @@ const config = {
       filename: 'index.html',
       title: info.TITLE,
       chunks: ['main'],
-      template: './src/index.html',
+      template: './index.html',
       templateParameters: { TITLE: info.TITLE }
     }),
   ],
