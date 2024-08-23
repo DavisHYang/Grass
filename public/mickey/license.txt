@@ -1,0 +1,8 @@
+Model Information:
+* title:	Steamboat Willie
+* source:	https://sketchfab.com/3d-models/steamboat-willie-58c5716c49c947f2a5aa152cec39cec0
+* author:	tramdrey (https://sketchfab.com/tramdrey)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

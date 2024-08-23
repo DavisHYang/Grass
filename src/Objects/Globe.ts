@@ -1,6 +1,6 @@
 import { THREE } from '../three-defs.js';
 
-import { getDefaultMaterial } from '../Shaders/Materials';
+import { getDefaultMaterial } from '../Shaders/Materials.js';
 
 import GameObject from './GameObject';
 
