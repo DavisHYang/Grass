@@ -15,6 +15,15 @@ varying vec4 vWorldPosition;
      uniform DirectionalLight directionalLights[ NUM_DIR_LIGHTS ];
 #endif
 
+#if NUM_HEMI_LIGHTS > 0
+	 struct HemisphereLight {
+		vec3 direction;
+		vec3 skyColor;
+		vec3 groundColor;
+	 };
+	 uniform HemisphereLight hemisphereLights[ NUM_HEMI_LIGHTS ];
+#endif
+
 uniform vec3 ambientLightColor;
 
 varying vec3 vPosition;
@@ -48,6 +57,16 @@ vec3 diffuseLight() {
 			);
 
 			totalDirectionalLight += nDotL * directionalLights[i].color;
+		}
+	#endif
+
+	#if NUM_HEMI_LIGHTS > 0
+		for( int i = 0; i < NUM_HEMI_LIGHTS; i++ ) {
+			float nDotL = max(
+				clamp(dot(normalize(source), -norm), 0.0, 1.0),
+				clamp(dot(normalize(source), norm), 0.0, 1.0)
+			);
+			totalDirectionalLight += nDotL * hemisphereLights[i].groundColor;
 		}
 	#endif
 

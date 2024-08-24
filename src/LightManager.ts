@@ -15,12 +15,21 @@ class LightManager {
         this.lights.push(new THREE.AmbientLight(0xFAD6A9, 1));
 
         // Directional Light + Hemisphere Light (Sun)
-        const direct = new THREE.DirectionalLight(0xFAD6A9, 5);
-        direct.position.set(0, 10, 0);
-        this.lights.push(direct);
-        // const hemi = new THREE.HemisphereLight(0xFFFFFF, 0x228B22, 3);
-        // hemi.position.set(0, 10, 0);
-        // this.lights.push(hemi);
+        const direct1 = new THREE.DirectionalLight(0xFAD6A9, 2);
+        direct1.position.set(-10, 20, 10);
+        this.lights.push(direct1);
+
+        const direct2 = new THREE.DirectionalLight(0xFAD6A9, 2);
+        direct2.position.set(10, 20, 10);
+        this.lights.push(direct2);
+
+        // const direct3 = new THREE.DirectionalLight(0xFAD6A9, 1);
+        // direct3.position.set(0, 20, -10);
+        // this.lights.push(direct3);
+
+        const hemi = new THREE.HemisphereLight(0xFAD6A9, 0xFAD6A9, 1);
+        hemi.position.set(0, 10, 0);
+        this.lights.push(hemi);
     }
 
     getLights = () : THREE.Light[] => {

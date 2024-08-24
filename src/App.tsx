@@ -5,6 +5,7 @@ import LightManager from './LightManager';
 import World from './World';
 
 import './main.css';
+import Cube from './Objects/Cube';
 
 // Camera settings
 const CAM = {
@@ -40,7 +41,7 @@ const App = () => {
     stats.showPanel(2);
     document.body.append(stats.dom);
 
-    scene.fog = new THREE.Fog(0xFAD6A9, 10, 100);
+    scene.fog = new THREE.Fog(0xFAD6A9, 10, 150);
 
   
     /*************************/
@@ -114,6 +115,9 @@ const App = () => {
     });
 
     world.generateGrass();
+
+    const cube = new Cube({pos: new THREE.Vector3(0, 2.5, 0), scale: new THREE.Vector3(5,5,5)});
+    scene.add(cube);
 
     
     /************************/

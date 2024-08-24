@@ -22,6 +22,9 @@ mat3 rotateX(float angle) {
 		vec3(0.0, -s, c)
 	);
 }
+float easeOut(float x, float t) {
+	return 1.0 - pow(1.0 - x, t);
+}
 vec3 mod289(vec3 x)
 {
   return x - floor(x * (1.0 / 289.0)) * 289.0;
@@ -85,6 +88,7 @@ float cnoise(vec2 P)
   float n_xy = mix(n_x.x, n_x.y, fade_xy.y);
   return 2.3 * n_xy;
 }
+
 
 
 #include <fog_pars_vertex>

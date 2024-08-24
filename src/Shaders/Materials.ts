@@ -15,10 +15,10 @@ const uniforms = THREE.UniformsUtils.merge(
     [THREE.UniformsLib['lights'],
     THREE.UniformsLib['fog'],
     {
-      baseColor: {value: new THREE.Vector3(.0502, .0856, .001)},
-      tipColor: {value: new THREE.Vector3(.254, .454, .156)},
-      aoColor: {value: new THREE.Vector3(.0502, .1056, .0701)},
-      height: {value: 1.5},
+        baseColor: {value: new THREE.Vector3(.0502, .0856, .001)},
+        tipColor: {value: new THREE.Vector3(.254, .454, .156)},
+        aoColor: {value: new THREE.Vector3(.0502, .1056, .0701)},
+        height: {value: 1.5},
     }
     ]
 )

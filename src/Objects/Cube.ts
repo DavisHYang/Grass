@@ -25,6 +25,7 @@ class Cube extends THREE.Mesh implements GameObject {
 
         this.position.set(x, y, z);
         this.scale.set(xScale, yScale, zScale);
+        this.castShadow = true;
     }
 
     // Does something in the animation loop
